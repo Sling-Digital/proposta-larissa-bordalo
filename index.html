@@ -2598,7 +2598,7 @@
 
   .pricing-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
     align-items: stretch;
   }
@@ -2890,6 +2890,11 @@
     line-height: 1.5;
     color: var(--text);
     margin: 0;
+  }
+
+  @media (max-width: 1180px) {
+    .pricing-grid { grid-template-columns: 1fr 1fr; }
+    .pricing-card--featured { order: -1; }
   }
 
   @media (max-width: 880px) {
@@ -3449,11 +3454,11 @@
         <div class="reveal">
           <div class="section-kicker">Investimento · contrato de 6 meses</div>
           <h2 class="section-h2">
-            Dois planos para começar com <em>tráfego bem estruturado</em>
+            Três planos para começar com <em>tráfego bem estruturado</em>
           </h2>
         </div>
         <p class="section-intro reveal" data-delay="1">
-          As duas opções focam em tráfego pago, criativos estáticos e estratégia de funil. A diferença é o canal de mídia e a presença do agente de IA no WhatsApp 24/7 no plano mais completo.
+          As opções escalam por complexidade: entrada com Meta Ads, recomendado com Meta + Google + IA no WhatsApp e um plano completo com a camada de CRM para acompanhar oportunidades e organizar a rotina comercial.
         </p>
       </div>
 
@@ -3506,10 +3511,37 @@
             <li><span class="pricing-check"></span><span>Adicional opcional: disparos de WhatsApp por + R$ 500/mês, com 1 disparo semanal</span></li>
           </ul>
         </article>
+
+        <article class="pricing-card reveal" data-delay="2">
+          <div class="pricing-card-header">
+            <span class="pricing-card-tag pricing-card-tag--muted">Completo · tráfego + IA + CRM</span>
+            <h3 class="pricing-card-title">Sistema completo com CRM</h3>
+            <p class="pricing-card-sub">Plano para além da captação: organizar oportunidades, acompanhar cada lead e dar clareza sobre o avanço comercial.</p>
+          </div>
+
+          <div class="pricing-card-price">
+            <span class="pricing-price-prefix">R$</span>
+            <span class="pricing-price-value">3.500</span>
+            <span class="pricing-price-unit">/mês</span>
+          </div>
+          <div class="pricing-card-total">
+            6 meses · investimento total <strong>R$ 21.000</strong>
+          </div>
+
+          <ul class="pricing-card-features">
+            <li><span class="pricing-check"></span><span>Gestão completa de tráfego pago (Meta + Google)</span></li>
+            <li><span class="pricing-check"></span><span>Criativos estáticos (peças e variações)</span></li>
+            <li><span class="pricing-check"></span><span>Estratégia e desenho do funil de vendas</span></li>
+            <li><span class="pricing-check"></span><span>Agente de IA no WhatsApp 24/7</span></li>
+            <li><span class="pricing-check"></span><span>CRM de acompanhamento para organizar leads, oportunidades e etapas comerciais</span></li>
+            <li><span class="pricing-check"></span><span>Visão de pipeline para acompanhar contatos, follow-ups e próximos passos</span></li>
+            <li><span class="pricing-check"></span><span>Adicional opcional: disparos de WhatsApp por + R$ 500/mês, com 1 disparo semanal</span></li>
+          </ul>
+        </article>
       </div>
 
       <p class="pricing-note reveal" data-delay="2">
-        Verba de mídia é tratada à parte e fica integralmente com você. Os valores acima são honorários Sling pela gestão, criativos, funil e, quando contratado, agente de IA. O adicional de disparos de WhatsApp é opcional: + R$ 500/mês para 1 disparo semanal.
+        Verba de mídia é tratada à parte e fica integralmente com você. Os valores acima são honorários Sling pela gestão, criativos, funil, agente de IA e, no plano completo, CRM de acompanhamento. O adicional de disparos de WhatsApp é opcional: + R$ 500/mês para 1 disparo semanal.
       </p>
     </div>
   </section>
